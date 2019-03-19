@@ -1,0 +1,15 @@
+<manifest>
+    <!-- add github as a remote source -->
+    <remote name="github" fetch="git://github.com" />
+
+    <!-- remove remove replicant projects and replace them with custom versions -->
+    <remove-project name="replicant/frameworks_native.git" />
+    <remove-project name="replicant/vendor_replicant.git" />
+    <remove-project name="replicant/kernel_samsung_smdk4412.git" />
+    <remove-project name="replicant/packages_apps_repwifi.git" />
+
+    <project path="frameworks/native" name="andresdju/frameworks_native.git" remote="github" revision="replicant-6.0-egl" groups="pdk" />
+    <project path="vendor/replicant" name="andresdju/vendor_replicant.git" remote="github" revision="replicant-6.0" />
+    <project path="kernel/samsung/smdk4412" name="andresdju/kernel_samsung_smdk4412.git" remote="github" revision="replicant-6.0" />
+
+</manifest>
